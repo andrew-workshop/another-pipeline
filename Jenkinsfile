@@ -1,10 +1,10 @@
 pipeline {
-  agent any
-  stages {
-    stage('new') {
-      steps {
-        sleep 1
-      }
+    agent none
+    stages {
+        stage('Publish Event') {
+            steps {
+                publishEvent simpleEvent('AndrewEvent')
+            }
+        }
     }
-  }
 }
